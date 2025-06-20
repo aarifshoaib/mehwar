@@ -6,11 +6,14 @@ import { appAnimations } from '../constants/animations';
 
 const SplashScreen = ({ onLayoutRootView }) => {
 
-
+    const [src, setSrc] = React.useState();
+    React.useEffect(() => {
+        setSrc(appAnimations['splash']);
+    }, []);
     return (
         <View style={styles.container}>
-            {<View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: '100%' }}>
-                <LottieView source={appAnimations['splash']} style={{ paddingTop: 180, paddingHorizontal: 240, alignItems: 'flex-end', justifyContent: 'flex-end' }} progress={1} autoPlay={true} loop={false} />
+            {<View style={{ flex:1, justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: '100%' }}>
+                <LottieView source={appAnimations['splash']} style={{  width:250, height:200, alignItems: 'flex-end', justifyContent: 'flex-end' }}  autoPlay={true} loop={false}/>
             </View>}
             <View style={{ flex: 1, backgroundColor: 'pinkd', justifyContent: 'flex-end' }}>
                 <Image

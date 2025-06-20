@@ -7,7 +7,7 @@ import React from 'react';
 import { appImages } from '../shared/constants/images';
 import { ImageButton } from '../shared/ui/buttons';
 import { theme } from '../shared/theme';
-import LottieView from 'lottie-react-native';
+import LottieView from "lottie-react-native";
 import { appAnimations } from '../shared/constants/animations';
 import { AppSharedContext } from '../shared/redux/app-shared.context';
 import axios from 'axios';
@@ -132,8 +132,7 @@ const LoginScreen = () => {
         <View
             style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <View style={{ flex: 1,  justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'center', width: '100%' }}>
-                {/* <Text>aa</Text> */}
-                <LottieView source={appAnimations['splash']} style={{ paddingTop:150, paddingHorizontal:240, alignItems:'flex-end',justifyContent:'flex-end' }} progress={1} autoPlay={false} loop={false} />
+                <LottieView source={appAnimations['splash']} style={{ width: 250, height: 200, alignItems: 'flex-end', justifyContent: 'flex-end' }} progress={1} autoPlay={false} loop={false} />
             </View>
             <View style={{   justifyContent: 'space-between', alignItems: 'center',alignSelf:'center', width: '100%',flex: 1 }}>
                 <ImageButton title='Employee Login' textStyle={{ color: theme.tint, fontSize: 18, padding: 10 }} image={'logonew'} onclick={_onLogin} style={styles.imageButton} />

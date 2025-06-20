@@ -89,7 +89,6 @@ function App() {
         <AppSharedContextProvider>
           <NavigationContainer>
             <GestureHandlerRootView style={{ flex: 1, }}>
-              
                 <StatusBar backgroundColor={(mode) == 'dark' ? 'light' : 'dark'} />
                 {!appIsReady && <SplashScreen onLayoutRootView={onLayoutRootView} />}
                 {fontsLoaded && appIsReady && (
@@ -97,7 +96,6 @@ function App() {
                   <AppMain />
                   </>
                 )}
-              
             </GestureHandlerRootView>
           </NavigationContainer>
         </AppSharedContextProvider>

@@ -150,3 +150,9 @@ dependencies {
         implementation jscFlavor
     }
 }
+// Ensure copyReactNativeVectorIconFonts runs before lintAnalyzeDebug
+tasks.whenTaskAdded { task ->
+    if (task.name == 'lintAnalyzeDebug') {
+        task.dependsOn 'copyReactNativeVectorIconFonts'
+    }
+}
