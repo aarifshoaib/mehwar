@@ -1,4 +1,72 @@
 {
   "name": "Mehwar_Attendance",
-  "displayName": "Mehwar_Attendance"
+  "displayName": "Mehwar Attendance",
+  "expo": {
+    "name": "Mehwar_Attendance",
+    "displayName": "Mehwar Attendance",
+    "slug": "mehwar-attendance",
+    "version": "1.0.0",
+    "backgroundColor": "white",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "ae.adports.attendance",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ae.adports.attendance",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos",
+        "NSPhotoLibraryAddUsageDescription": "Allow $(PRODUCT_NAME) to save photos",
+        "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access your camera"
+      },
+      "googleServicesFile": "./GoogleService-Info.plist"
+    },
+    "android": {
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_MEDIA_LOCATION",
+        "android.permission.SCHEDULE_EXACT_ALARM",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.WAKE_LOCK",
+        "android.permission.QUERY_ALL_PACKAGES"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "limegreen"
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "category": [
+            "DEFAULT",
+            "BROWSABLE"
+          ],
+          "data": {
+            "scheme": "ae.adports.attendance",
+            "host": "ae.adports.attendance",
+            "pathPrefix": "/android/callback"
+          }
+        }
+      ],
+      "package": "ae.adports.attendance",
+      "appAuthRedirectScheme": "ae.adports.attendance"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [],
+    "extra": {
+      "eas": {
+        "projectId": "e3b7bdf5-8919-447b-808a-7c7359b9119a"
+      }
+    },
+    "owner": "adports-group"
+  }
 }

@@ -1,6 +1,7 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -52,6 +53,11 @@ react {
 
     /* Autolinking */
     autolinkLibrariesWithApp()
+    // //
+    // // Added by install-expo-modules
+    // entryFile = file(["node", "-e", "require('expo/scripts/resolveAppEntry')", rootDir.getAbsoluteFile().getParentFile().getAbsolutePath(), "android", "absolute"].execute(null, rootDir).text.trim())
+    // cliFile = new File(["node", "--print", "require.resolve('@expo/cli')"].execute(null, rootDir).text.trim())
+    // bundleCommand = "export:embed"
 }
 
 /**
@@ -77,15 +83,21 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.mehwar_attendance"
+    namespace "ae.adports.attendance"
     defaultConfig {
-        applicationId "com.mehwar_attendance"
+        applicationId "ae.adports.attendance"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
     }
     signingConfigs {
+        release {
+           storeFile file(MYAPP_UPLOAD_STORE_FILE)
+            storePassword MYAPP_UPLOAD_STORE_PASSWORD
+            keyAlias MYAPP_UPLOAD_KEY_ALIAS
+            keyPassword MYAPP_UPLOAD_KEY_PASSWORD
+        }
         debug {
             storeFile file('debug.keystore')
             storePassword 'android'
@@ -98,12 +110,33 @@ android {
             signingConfig signingConfigs.debug
         }
         release {
-            // Caution! In production, you need to generate your own keystore file.
-            // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
-            minifyEnabled enableProguardInReleaseBuilds
-            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+/*
+// This task is already defined in the fonts.gradle file
+task copyReactNativeVectorIconFonts(type: Copy) {
+    from "${rootProject.projectDir}/../node_modules/react-native-vector-icons/Fonts"
+    into "${buildDir}/intermediates/assets/debug/fonts"
+    into "${buildDir}/intermediates/assets/release/fonts"
+    include '*.ttf'
+    include '*.otf'
+}
+*/
+
+tasks.whenTaskAdded { task ->
+    if (task.name == 'generateDebugLintReportModel') {
+        task.dependsOn 'copyReactNativeVectorIconFonts'
+    }
+    if (task.name == 'generateReleaseLintReportModel') {
+        task.dependsOn 'copyReactNativeVectorIconFonts'
     }
 }
 

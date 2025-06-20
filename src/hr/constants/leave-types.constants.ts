@@ -1,0 +1,58 @@
+export const LeaveType = {
+    ESCORT_LEAVE: '300000004467334',
+    STANDBY_LEAVE: '300000004927201',
+    STUDY_LEAVE: '300000004927236',
+    TRAINING_LEAVE: '300000004927271',
+    UNAUTHORIZED_LEAVE: '300000004927308',
+    UNPAID_LEAVE: '300000004927344',
+    ANNUAL_LEAVE: '300000004937251',
+    ATTENDANCE_REGULARIZATION : '300000004937286',
+    BUISINESS_TRIP_INTERNATIONAL: '300000004937334',
+    BUISINESS_TRIP_LOCAL: '300000004937369',
+    COMPASSIONATE_LEAVE: '300000004937404',
+    COMPENSATORY_OFF: '300000004937450',
+    DUTY_TRAVEL_LEAVE: '300000004937485',
+    ESCORT_LEAVE_OUTSIDE: '300000004937555',
+    EVENT_LEAVE: '300000004937590',
+    EXAM_LEAVE: '300000004937625',
+    EXAM_LEAVE_OUTSIDE: '300000004937660',
+    HAJJ_LEAVE: '300000004937695',
+    MISSION_LEAVE : '300000004937879',
+    NATIONAL_LEAVE: '300000004937914',
+    PATERNITY_LEAVE: '300000004937984',    
+    REMOTE_WORK :'300000004940019',
+    REMOTE_WORK_SPECIAL: '300000004940054',
+    SICK_LEAVE: '300000004940089',
+    SICK_LEAVE_PAID: '300000004940164',
+    SPECIAL_ESCORT_LEAVE : '300000004940199',
+    SPECIAL_MEDICAL_LEAVE: '300000004940234'
+}
+export const RemoteWork = [
+    { label: 'Remote Work', value: LeaveType.REMOTE_WORK },
+    { label: 'Remote Work Special', value: LeaveType.REMOTE_WORK_SPECIAL }
+];
+
+export const LeaveRequest = [
+    { label: 'Escort Leave', value: LeaveType.ESCORT_LEAVE },
+    { label: 'Standby Leave', value: LeaveType.STANDBY_LEAVE },
+    { label: 'Study Leave', value: LeaveType.STUDY_LEAVE },
+    { label: 'Training Leave', value: LeaveType.TRAINING_LEAVE },
+    { label: 'Unauthorized Leave', value: LeaveType.UNAUTHORIZED_LEAVE },
+    { label: 'Unpaid Leave', value: LeaveType.UNPAID_LEAVE },
+    { label: 'Annual Leave', value: LeaveType.ANNUAL_LEAVE },
+    { label: 'Compassionate Leave', value: LeaveType.COMPASSIONATE_LEAVE },
+    { label: 'Compensatory Off', value: LeaveType.COMPENSATORY_OFF },
+    { label: 'Duty Travel Leave', value: LeaveType.DUTY_TRAVEL_LEAVE },
+    { label: 'Escort Leave Outside', value: LeaveType.ESCORT_LEAVE_OUTSIDE },
+    { label: 'Event Leave', value: LeaveType.EVENT_LEAVE },
+    { label: 'Exam Leave', value: LeaveType.EXAM_LEAVE },
+    { label: 'Exam Leave Outside', value: LeaveType.EXAM_LEAVE_OUTSIDE },
+    { label: 'Hajj Leave', value: LeaveType.HAJJ_LEAVE },
+    { label: 'Mission Leave', value: LeaveType.MISSION_LEAVE },
+    { label: 'National Leave', value: LeaveType.NATIONAL_LEAVE },
+    { label: 'Paternity Leave', value: LeaveType.PATERNITY_LEAVE },
+    { label: 'Sick Leave', value: LeaveType.SICK_LEAVE },
+    { label: 'Sick Leave Paid', value: LeaveType.SICK_LEAVE_PAID },
+    { label: 'Special Escort Leave', value: LeaveType.SPECIAL_ESCORT_LEAVE },
+    { label: 'Special Medical Leave', value: LeaveType.SPECIAL_MEDICAL_LEAVE }
+];
