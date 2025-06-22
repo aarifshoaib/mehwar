@@ -56,7 +56,8 @@ const PunchingContextProvider = ({ children }) => {
                 }),
                 axiosInstance.get(`${env.coreServices}attendance?year=${year}&month=${month}`)
             ]);
-
+            console.log(remoteRes, 'remoteRes');
+            console.log(attendanceRes, 'attendanceRes');
             // Remote API
             const remoteStatus = remoteRes.data?.Status;
             const remoteData = remoteRes.data?.Result;
