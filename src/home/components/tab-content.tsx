@@ -29,7 +29,7 @@ const EmployeeService = ({ data, navigation }) => {
           source={appImages[data.item.icon]}
           resizeMode={'contain'}
         />
-        <Text lineBreakMode='middle' style={{ textAlign: 'center', color: '#707070', fontFamily: 'Poppins', fontSize: 12 }}>{data.item.name}</Text>
+        <Text lineBreakMode='middle' style={{ textAlign: 'center', color: '#707070', fontFamily: 'Poppins-Regular', fontSize: 12 }}>{data.item.name}</Text>
       </View>
     </TouchableOpacity>
   )

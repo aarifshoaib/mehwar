@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
         alignItems: 'baseline', // This aligns the text baselines
     },
     punchingTime: {
-        fontFamily: theme.fontFamilyLight,
+        fontFamily: theme.fontFamily,
         fontSize: 50,
         color: '#3E5D7B',
     },
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
         fontSize: 18
     },
     punchingTime: {
-        fontFamily: theme.fontFamilyLight,
+        fontFamily: theme.fontFamily,
         fontSize: 50,
         color: '#3E5D7B',
     },

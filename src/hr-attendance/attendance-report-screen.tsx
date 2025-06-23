@@ -110,7 +110,7 @@ const AttendanceReportScreen = ({ navigation, route }) => {
                 <SegmentedControl
                     values={['My Attendance', 'Unauthorized']}
                     tintColor={theme.primary}
-                    fontStyle={{ color: theme.primaryDark }}
+                    fontStyle={{ color: theme.primaryDark, fontFamily: theme.fontFamily }}
                     activeFontStyle={{ color: theme.tint }}
                     style={{ height: 40, borderRadius: 18, backgroundColor: theme.tint, }}
                     selectedIndex={selectedIndex}

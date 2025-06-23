@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         color: theme.tint,
         fontSize: 20,
         marginStart: 25,
-        fontFamily: 'Poppins',
+        fontFamily: 'Poppins-Regular',
         textTransform: 'capitalize'
     },
     image: {

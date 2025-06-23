@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         alignSelf: 'center',
         color: theme.tint,
-        fontFamily: 'Poppins'
+        fontFamily: 'Poppins-Regular',
     },
     itemWrapper: {
         borderRadius: 10,

@@ -1,0 +1,20 @@
+diff --git a/node_modules/lottie-react-native/src/android/build.gradle b/node_modules/lottie-react-native/src/android/build.gradle
+index 6ac87e8..ff4e74d 100644
+--- a/node_modules/lottie-react-native/src/android/build.gradle
++++ b/node_modules/lottie-react-native/src/android/build.gradle
+@@ -3,11 +3,12 @@ def safeExtGet(prop, fallback) {
+ }
+ 
+ apply plugin: 'com.android.library'
++apply from: 'gradle-maven-push.gradle'
+ 
+ //def DEFAULT_ANDROID_SUPPORT_LIB_VERSION = "1.0.0"
+ 
+ android {
+-  compileSdkVersion safeExtGet('compileSdkVersion', 30)
++  compileSdkVersion 36
+ 
+diff --git a/node_modules/lottie-react-native/src/android/build/.transforms/79ed9cb9f8d793943deb684ca5e00bfb/results.bin b/node_modules/lottie-react-native/src/android/build/.transforms/79ed9cb9f8d793943deb684ca5e00bfb/results.bin
+new file mode 100644
+index 0000000..7ed749e
+--- /dev/null

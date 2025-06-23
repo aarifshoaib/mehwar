@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     textTitle: {
         color: theme.tint,
         fontSize: 21,
-        fontFamily: 'Poppins',
+        fontFamily: 'Poppins-Regular',
         marginLeft: 15,
         alignSelf: 'flex-start',
         alignItems: 'flex-start'

@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
   tileNumber: {
     fontSize: 25,
     color: '#fff',
-    fontFamily: 'AdportsThin',
+    fontFamily: theme.fontFamily,
     textShadowColor: 'rgba(255,255,255,.5)',
     textShadowOffset: { width: 0, height: 1 },
     textShadowRadius: 1,
@@ -208,7 +208,7 @@ const styles = StyleSheet.create({
   tileFontStyle: {
     color: '#e5f2fc',
     textShadowColor: 'rgba(255,255,255,.5)',
-    fontFamily: 'AdportsThin',
+    fontFamily: theme.fontFamily,
     fontSize: 20
     // textShadowOffset: { width: 0, height: 1 },
     // textShadowRadius: 1,
@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
     color: '#333'
   },
   tileTitle: {
-    fontFamily: 'AdportsRegular',
+    fontFamily: theme.fontFamily,
     fontSize: 12,
     flex: 1,
     color: '#fff',

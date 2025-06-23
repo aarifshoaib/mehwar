@@ -31,9 +31,11 @@ export const theme = {
     warningDark: darkenColor(colors.warning, 0.3),
     background: colors.light,
     default: '#aaa',
+    fontAdportsRegular: 'ADPortsGroup-Regular',
+    fontAdportsLight: 'ADPortsGroup-Light',
     fontFamilyThin: 'Poppins-Thin',
     fontFamilyLight: 'Poppins-Light',
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins-Regular',
     fontFamilyBold: 'Poppins-Bold',
     fontSemiBold: 'Poppins-SemiBold',
     fontFamilyRegular:'Poppins-Regular',
@@ -43,10 +45,11 @@ export const theme = {
     pageFontSize: 15,
     pageTitleFontSize: 17,
 
+
     controlBorderColor: '#B6CFE7', /* '#DADBDF', */
     controlBackgroundColor: '#fff',
     controlLabelColor: darkenColor(colors.primary, 0.3),
-    controlLabelFontFamily: 'Poppins',
+    controlLabelFontFamily: 'Poppins-Regular',
     controlBorderRadius: 12,
     controlSpacing: 0,
     controlLabelFontSize: 16,
